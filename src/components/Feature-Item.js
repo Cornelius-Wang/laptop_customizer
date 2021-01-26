@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import slugify from 'slugify';
+import Specs from './Specifications';
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -35,12 +36,18 @@ class Options extends Component {
                   <legend className="feature__name">
                     <h3>{feature}</h3>
                   </legend>
-                  {options}
+                  <Specs 
+                  selected = {this.props.selected}
+                  features = {this.props.features}
+                  onUpdateFeature= {this.props.onUpdateFeature}
+                  />
                 </fieldset>
             )
         });
-        return(<div>{features}</div>)
-        }
+        return(
+        <div>{features}</div>
+        )
+    }
 }
 
 export default Options;
