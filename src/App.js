@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 
 import './App.css';
 import {FEATURES} from './components/Part-List';
-import Total from './components/Total'
 import Summary from './components/Summary';
 import Features from './components/Features';
 
@@ -52,24 +51,12 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <form className="main__form">
-            <h2>Customize your laptop</h2>
             <Features 
               selected={this.state.selected} 
               features={this.state.features}
               onUpdateFeature={this.updateFeature}
             />
-          </form>
-          <section className="main__summary">
-            <h2>Your cart</h2>
             <Summary selected={this.state.selected}/>
-            <div className="summary__total">
-              <div className="summary__total__label">Total</div>
-              <div className="summary__total__value">
-                <Total selected={this.state.selected}/>
-              </div>
-            </div>
-          </section>
         </main>
       </div>
     );
