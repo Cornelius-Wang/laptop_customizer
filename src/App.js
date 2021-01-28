@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {FEATURES} from './components/Part-List';
 import Summary from './components/Summary';
-import Features from './components/Features';
+import Options from './components/Feature-Item';
 
 
 class App extends Component {
@@ -51,7 +51,7 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-            <Features 
+            <Options 
               selected={this.state.selected} 
               features={this.state.features}
               onUpdateFeature={this.updateFeature}
