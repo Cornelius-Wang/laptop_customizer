@@ -1,4 +1,4 @@
-export const FEATURES = {
+export const PartList = {
     
   Processor: [
       {

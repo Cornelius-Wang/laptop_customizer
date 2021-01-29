@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 // in both URLs and html attributes
 
 import './App.css';
-import {FEATURES} from './components/Part-List';
+import {PartList} from './components/Part-List';
 import Summary from './components/Summary';
-import Options from './components/Feature-Item';
+import FeatureItem from './components/Feature-Item';
 
 
 class App extends Component {
@@ -30,7 +30,7 @@ class App extends Component {
         cost: 1500
       }
     },
-    features: FEATURES
+    features: PartList
   };
 
 
@@ -51,7 +51,7 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-            <Options 
+            <FeatureItem 
               selected={this.state.selected} 
               features={this.state.features}
               onUpdateFeature={this.updateFeature}
