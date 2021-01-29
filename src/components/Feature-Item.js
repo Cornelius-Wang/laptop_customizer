@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import slugify from 'slugify';
 import Specs from './Specifications';
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
@@ -7,7 +6,7 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   currency: 'USD'
 });
 
-class Options extends Component {
+class FeatureItem extends Component {
     
     render() {
         return(
@@ -23,4 +22,4 @@ class Options extends Component {
     }
 }
 
-export default Options;
+export default FeatureItem;
